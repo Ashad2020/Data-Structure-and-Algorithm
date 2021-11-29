@@ -25,7 +25,7 @@ void create(int A[], int n)
    }
 }
 
-int countNodes (struct Node *p)
+int sum(struct Node *p)
 {
    if(p == NULL)
    {
@@ -33,14 +33,14 @@ int countNodes (struct Node *p)
    }
    else
    {
-       return countNodes(p -> next) + p -> data;
+       return sum(p -> next) + p -> data;
    }
 }
 int main()
 {
     int A[] = {3,01,1,1,1,1,1};
     create(A, 7);
-    int result = countNodes(first);
+    int result = sum(first);
     printf("%d",result);
     return 0;
 }
